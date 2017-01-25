@@ -52,6 +52,7 @@ cat /tmp/alerts.log
 ```
 
 **Enable Kapacitor**
+
 Now that we know it’s working, let’s change it back to a more reasonable
 threshold. Are you happy with the threshold? If so, let’s enable the task so it
 can start processing the live data stream with:
