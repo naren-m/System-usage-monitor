@@ -1,0 +1,11 @@
+batch
+    |query('''
+        SELECT mean(usage_idle)
+        FROM "kapacitor_example"."autogen"."cpu"
+    ''')
+        .period(5m)
+        .every(5m)
+        .groupBy(time(1m))
+    |alert()
+        .crit(lambda: "mean" < 70)
+        .log('/tmp/alerts.log')
