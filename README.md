@@ -74,5 +74,7 @@ guide](https://docs.influxdata.com/kapacitor/v1.2/introduction/getting_started/)
 **Creating Config file**
 
 InfluxDB  - docker run --rm influxdb incluxd config > influxdb.conf
+
 Kapacitor - docker run --rm kapacitor kapacitord config > kapacitor.conf
+
 Telegraf  - docker run --rm telegraf -sample-config -input-filter cpu:mem -output-filter influxdb > telegraf.conf
