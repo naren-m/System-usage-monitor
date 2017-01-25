@@ -4,6 +4,7 @@ Influxdata getting started with dockers
 **Starting dockers**
 
 Use below scripts to launch dockers
+
     - start_influx_docker.sh
     - start_kapacitor_docker.sh
     - start_telegraf_docker.sh
@@ -11,10 +12,7 @@ Use below scripts to launch dockers
 
 **Defining Kapacitor**
 
-kapacitor define cpu_alert \
-    -type stream \
-    -tick cpu_alert.tick \
-    -dbrp telegraf.autogen
+kapacitor define cpu_alert -type stream -tick cpu_alert.tick -dbrp telegraf.autogen
 
 **Testing the Tick script**
 
