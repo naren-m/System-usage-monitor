@@ -14,6 +14,27 @@ Use below scripts to launch dockers
 
 kapacitor define cpu_alert -type stream -tick cpu_alert.tick -dbrp telegraf.autogen
 
+
+**Enable Kapacitor**
+
+Now that we know it’s working, let’s change it back to a more reasonable
+threshold. Are you happy with the threshold? If so, let’s enable the task so it
+can start processing the live data stream with:
+```
+kapacitor enable cpu_alert
+```
+Show Kapacitor task       
+```
+kapacitor show cpu_alert
+```
+Running task on Kapacitor to bring CPU usage to above 70
+```
+while true; do i=0; done
+```
+
+For detail explanation please look at the [Kapacitor geting started
+guide](https://docs.influxdata.com/kapacitor/v1.2/introduction/getting_started/)
+
 **Testing the Tick script**
 
 However nothing is going to happen until we enable the task. Before we enable
@@ -51,25 +72,13 @@ Check logs as below:
 cat /tmp/alerts.log
 ```
 
-**Enable Kapacitor**
+**Checking logs**
+```
+docker logs -f influxdb
+docker logs -f telegraf
+docker logs -f kapacitor
 
-Now that we know it’s working, let’s change it back to a more reasonable
-threshold. Are you happy with the threshold? If so, let’s enable the task so it
-can start processing the live data stream with:
 ```
-kapacitor enable cpu_alert
-```
-Show Kapacitor task       
-```
-kapacitor show cpu_alert
-```
-Running task on Kapacitor to bring CPU usage to above 70
-```
-while true; do i=0; done
-```
-
-For detail explanation please look at the [Kapacitor geting started
-guide](https://docs.influxdata.com/kapacitor/v1.2/introduction/getting_started/)
 
 **Creating Config file**
 
