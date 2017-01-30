@@ -4,6 +4,7 @@ Influxdata getting started with dockers
 **Starting dockers**
 
 Use below scripts to launch dockers
+
     - start_influx_docker.sh
     - start_kapacitor_docker.sh
     - start_telegraf_docker.sh
@@ -11,10 +12,28 @@ Use below scripts to launch dockers
 
 **Defining Kapacitor**
 
-kapacitor define cpu_alert \
-    -type stream \
-    -tick cpu_alert.tick \
-    -dbrp telegraf.autogen
+kapacitor define cpu_alert -type stream -tick cpu_alert.tick -dbrp telegraf.autogen
+
+
+**Enable Kapacitor**
+
+Now that we know it’s working, let’s change it back to a more reasonable
+threshold. Are you happy with the threshold? If so, let’s enable the task so it
+can start processing the live data stream with:
+```
+kapacitor enable cpu_alert
+```
+Show Kapacitor task       
+```
+kapacitor show cpu_alert
+```
+Running task on Kapacitor to bring CPU usage to above 70
+```
+while true; do i=0; done
+```
+
+For detail explanation please look at the [Kapacitor geting started
+guide](https://docs.influxdata.com/kapacitor/v1.2/introduction/getting_started/)
 
 **Testing the Tick script**
 
@@ -53,26 +72,18 @@ Check logs as below:
 cat /tmp/alerts.log
 ```
 
-Now that we know it’s working, let’s change it back to a more reasonable
-threshold. Are you happy with the threshold? If so, let’s enable the task so it
-can start processing the live data stream with:
+**Checking logs**
 ```
-kapacitor enable cpu_alert
-```
-Show Kapacitor task       
-```
-kapacitor show cpu_alert
-```
-Running task on Kapacitor to bring CPU usage to above 70
-```
-while true; do i=0; done
-```
+docker logs -f influxdb
+docker logs -f telegraf
+docker logs -f kapacitor
 
-For detail explanation please look at the [Kapacitor geting started
-guide](https://docs.influxdata.com/kapacitor/v1.2/introduction/getting_started/)
+```
 
 **Creating Config file**
 
 InfluxDB  - docker run --rm influxdb incluxd config > influxdb.conf
+
 Kapacitor - docker run --rm kapacitor kapacitord config > kapacitor.conf
+
 Telegraf  - docker run --rm telegraf -sample-config -input-filter cpu:mem -output-filter influxdb > telegraf.conf
