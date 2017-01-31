@@ -1,9 +1,10 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"net/http"
+	"reflect"
 	"strings"
 )
 
@@ -36,6 +37,7 @@ func formatRequest(r *http.Request) string {
 		}
 	}
 
+	fmt.Println("Before processng POST")
 	// If this is a POST, add post data
 	if r.Method == "POST" {
 		r.ParseForm()
@@ -43,25 +45,15 @@ func formatRequest(r *http.Request) string {
 		request = append(request, r.Form.Encode())
 	}
 	// Return the request as a string
+	fmt.Println("After processng POST")
 	return strings.Join(request, "\n")
 }
 
 func test(rw http.ResponseWriter, req *http.Request) {
-	// fmt.Println("--> %s\n\n", formatRequest(req))
-	decoder := json.NewDecoder(req.Body)
-
-	var t test_struct
-	err := decoder.Decode(&t)
-
-	fmt.Println("t:", t)
-
-	if err != nil {
-		fmt.Println(err)
-		panic(err)
-	}
-
+	body, _ := ioutil.ReadAll(req.Body)
+	fmt.Println(string(body))
+	fmt.Println(reflect.TypeOf(body))
 	defer req.Body.Close()
-	fmt.Println("t.Test", t.Test)
 }
 
 func main() {

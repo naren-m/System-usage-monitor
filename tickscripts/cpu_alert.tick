@@ -5,5 +5,5 @@ stream
     |alert()
         .crit(lambda: "usage_idle" <  70)
         // Whenever we get an alert write it to a file.
-        .log('/tmp/alerts.log')
-        .post('http://10.154.165.131:8080/')
+       // .log('/tmp/alerts.log')
+        .post('http://10.154.160.57:8080/')
