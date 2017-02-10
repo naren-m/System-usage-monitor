@@ -2,7 +2,8 @@ Influxdata getting started with dockers
 
 **References**
 
-[Kapacitpor API Documentation](https://docs.influxdata.com/kapacitor/v1.2/api/api)
+    - [Kapacitpor API Documentation](https://docs.influxdata.com/kapacitor/v1.2/api/api)
+    - [Kapacitor Templating Documentation](https://docs.influxdata.com/kapacitor/v1.2/examples/template_tasks/)
 
 
 **Starting dockers**
