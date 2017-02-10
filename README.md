@@ -1,5 +1,9 @@
 Influxdata getting started with dockers
 
+**References**
+
+[Kapacitpor API Documentation](https://docs.influxdata.com/kapacitor/v1.2/api/api)
+
 
 **Starting dockers**
 
@@ -8,6 +12,7 @@ Use below scripts to launch dockers
     - start_influx_docker.sh
     - start_kapacitor_docker.sh
     - start_telegraf_docker.sh
+
 
 
 **Defining Kapacitor**
