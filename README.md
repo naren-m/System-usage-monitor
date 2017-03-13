@@ -9,12 +9,14 @@ Use below scripts to launch dockers
     - start_kapacitor_docker.sh
     - start_telegraf_docker.sh
 
-## Defining Tickscript
+## Creating and using tick scripts
+
+### Defining Tickscript
 
 kapacitor define cpu_alert -type stream -tick cpu_alert.tick -dbrp telegraf.autogen
 
 
-## Enable Tickscript
+### Enable Tickscript
 
 Now that we know it’s working, let’s change it back to a more reasonable
 threshold. Are you happy with the threshold? If so, let’s enable the task so it
@@ -39,7 +41,7 @@ while true; do i=0; done
 For detail explanation please look at the [Kapacitor geting started
 guide](https://docs.influxdata.com/kapacitor/v1.2/introduction/getting_started/)
 
-## Testing the Tick script
+### Testing the Tick script
 
 However nothing is going to happen until we enable the task. Before we enable
 the task, we should test it first so we do not spam ourselves with alerts.
@@ -80,6 +82,10 @@ Check logs as below:
 cat /tmp/alerts.log
 ```
 
+## Creating and using templates
+
+[Defining templates](tickscripts/templates/README.md)
+
 ## Checking logs
 
 ```shell
@@ -99,6 +105,8 @@ Telegraf  - docker run --rm telegraf -sample-config -input-filter cpu:mem -outpu
 
 ## References
 
-1.[Kapacitpor API Documentation](https://docs.influxdata.com/kapacitor/v1.2/api/api)
+1.[Kapacitor geting startedguide](https://docs.influxdata.com/kapacitor/v1.2/introduction/getting_started/)
 
-2.[Kapacitor Templating Documentation](https://docs.influxdata.com/kapacitor/v1.2/examples/template_tasks/)
+2.[Kapacitpor API Documentation](https://docs.influxdata.com/kapacitor/v1.2/api/api)
+
+3.[Kapacitor Templating Documentation](https://docs.influxdata.com/kapacitor/v1.2/examples/template_tasks/)
