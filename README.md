@@ -41,11 +41,23 @@ docker logs -f kapacitor
 
 ## Creating Config file
 
-InfluxDB  - docker run --rm influxdb incluxd config > influxdb.conf
+InfluxDB
 
-Kapacitor - docker run --rm kapacitor kapacitord config > kapacitor.conf
+```s
+docker run --rm influxdb incluxd config > influxdb.conf
+```
 
-Telegraf  - docker run --rm telegraf -sample-config -input-filter cpu:mem -output-filter influxdb > telegraf.conf
+Kapacitor
+
+```s
+docker run --rm kapacitor kapacitord config > kapacitor.conf
+```
+
+Telegraf
+
+```s
+docker run --rm telegraf -sample-config -input-filter cpu:mem -output-filter influxdb > telegraf.conf
+```
 
 ## References
 
