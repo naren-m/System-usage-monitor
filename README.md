@@ -9,13 +9,12 @@ Use below scripts to launch dockers
     - start_kapacitor_docker.sh
     - start_telegraf_docker.sh
 
-## Trigger alert from Stream data using tick scripts
 
-[Defining teplates](https://github.com/naren-m/influxdb_get_started/tree/master/tickscripts)
+## Trigger alert from Stream data using
 
-## Trigger alert from Stream data using templates
+1.[TickScripts](https://github.com/naren-m/influxdb_get_started/tree/master/tickscripts)
 
-[Defining templates](https://github.com/naren-m/influxdb_get_started/tree/master/tickscripts/templates)
+2.[Templates](https://github.com/naren-m/influxdb_get_started/tree/master/tickscripts/templates)
 
 ## Checking logs
 

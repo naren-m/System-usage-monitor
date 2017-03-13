@@ -6,4 +6,5 @@ docker run -p 9092:9092 \
           -e KAPACITOR_INFLUXDB_0_URLS_0=http://influxdb:8086 \
           -h kapacitor \
           --net=influxdb \
+          --rm \
           kapacitor
