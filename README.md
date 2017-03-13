@@ -27,7 +27,7 @@ Get into the tickscripts/templates directory then define and run the tickscripts
 
 1.[TickScripts](https://github.com/naren-m/influxdb_get_started/tree/master/tickscripts)
 
-2.[Templates](https://github.com/naren-m/influxdb_get_started/tree/master/tickscripts/templates)
+2.[Templates](https://github.com/naren-m/influxdb_get_started/tree/master/templates)
 
 
 ## Checking logs
