@@ -32,7 +32,7 @@ kapacitor show cpu_alert
 
 Running task on Kapacitor to bring CPU usage to above 70
 
-```s
+```shell
 while true; do i=0; done
 ```
 
@@ -45,7 +45,7 @@ However nothing is going to happen until we enable the task. Before we enable
 the task, we should test it first so we do not spam ourselves with alerts.
 Record the current data stream for a bit so we can use it to test our task with
 
-```s
+```shell
 kapacitor record stream -task cpu_alert -duration 20s
 ```
 
@@ -76,13 +76,13 @@ kapacitor replay -recording $rid -task cpu_alert
 
 Check logs as below:
 
-```s
+```shell
 cat /tmp/alerts.log
 ```
 
 ## Checking logs
 
-```s
+```shell
 docker logs -f influxdb
 docker logs -f telegraf
 docker logs -f kapacitor
