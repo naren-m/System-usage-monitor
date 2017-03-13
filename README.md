@@ -1,7 +1,12 @@
 # Influxdata getting started with dockers
 
-
 ## Starting dockers
+
+Create a docker network named "infuxdb"
+
+```s
+docker network create influxdb
+```
 
 Use below scripts to launch dockers
 
@@ -9,12 +14,21 @@ Use below scripts to launch dockers
     - start_kapacitor_docker.sh
     - start_telegraf_docker.sh
 
+## Trigger alert from Stream data using Tickscripts and Templates
 
-## Trigger alert from Stream data using
+After starting all the dockers, get on to the kapacitor docker using below command.
+
+```s
+docker exec -it kapacitor bash -l
+```
+
+Get into the tickscripts/templates directory then define and run the tickscripts/templates.
+
 
 1.[TickScripts](https://github.com/naren-m/influxdb_get_started/tree/master/tickscripts)
 
 2.[Templates](https://github.com/naren-m/influxdb_get_started/tree/master/tickscripts/templates)
+
 
 ## Checking logs
 

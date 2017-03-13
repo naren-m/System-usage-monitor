@@ -1,0 +1,22 @@
+var measurement string
+
+var crit lambda
+
+var posturl string
+
+var log_file string
+
+var outdb string
+
+var alert_measurement string
+
+stream
+    |from()
+        .measurement(measurement)
+    |alert()
+         .crit(crit)
+         .log(log_file)
+         .post(posturl)
+    |influxDBOut()
+         .database(outdb)
+         .measurement(alert_measurement)

@@ -1,9 +1,8 @@
-# Creating and using tick scripts
+# Trigger alert from Stream data using Tickscript
 
-## Defining Tickscript
+## Define Tickscript
 
 kapacitor define cpu_alert -type stream -tick cpu_alert.tick -dbrp telegraf.autogen
-
 
 ## Enable Tickscript
 

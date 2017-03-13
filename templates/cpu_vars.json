@@ -1,10 +1,8 @@
 {
     "measurement": {"type" : "string", "value" : "cpu" },
-    "where_filter": {"type": "lambda", "value": "\"cpu\" == 'cpu-total'"},
-    "groups": {"type": "list", "value": [{"type":"string", "value":"host"},{"type":"string", "value":"dc"}]},
-    "field": {"type" : "string", "value" : "usage_idle" },
-    "warn": {"type" : "lambda", "value" : "\"mean\" < 30.0" },
-    "crit": {"type" : "lambda", "value" : "\"mean\" < 10.0" },
-    "window": {"type" : "duration", "value" : "1m" },
-    "slack_channel": {"type" : "string", "value" : "#alerts_testing" }
+    "crit": {"type" : "lambda", "value" : "\"usage_idle\" < 70" },
+    "posturl": {"type" : "string", "value" : "http://10.154.166.8:8080/" },
+    "log_file": {"type" : "string", "value" : "/tmp/alerts.log" },
+    "outdb": {"type" : "string", "value" : "mydb" },
+    "alert_measurement": {"type" : "string", "value" : "kapactor_alerts" }
 }
