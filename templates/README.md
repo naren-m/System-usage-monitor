@@ -2,4 +2,6 @@
 
 ## Define Template
 
-kapacitor define cpu_alert -type stream -tick cpu_alert.tick -dbrp telegraf.autogen
+## Reference
+
+[Defining template examples](https://docs.influxdata.com/kapacitor/v1.0/examples/template_tasks/)
