@@ -16,7 +16,6 @@ stream
     |alert()
          .crit(crit)
          .log(log_file)
-         .post(posturl)
     |influxDBOut()
          .database(outdb)
          .measurement(alert_measurement)

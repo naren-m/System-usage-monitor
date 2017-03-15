@@ -1,7 +1,6 @@
 {
     "measurement": {"type" : "string", "value" : "cpu" },
     "crit": {"type" : "lambda", "value" : "\"usage_idle\" < 70" },
-    "posturl": {"type" : "string", "value" : "http://10.154.166.8:8080/" },
     "log_file": {"type" : "string", "value" : "/tmp/alerts.log" },
     "outdb": {"type" : "string", "value" : "mydb" },
     "alert_measurement": {"type" : "string", "value" : "kapactor_alerts" }
