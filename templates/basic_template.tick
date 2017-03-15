@@ -2,8 +2,6 @@ var measurement string
 
 var crit lambda
 
-var posturl string
-
 var log_file string
 
 var outdb string

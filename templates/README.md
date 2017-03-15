@@ -13,22 +13,22 @@ Steps to define and enable alerts using templates
 
 Defining Template
 ```shell
-kapacitor define-template generic_mean_alert -tick path/to/above/script.tick -type stream
-kapacitor show-template generic_mean_alert
+kapacitor define-template basic_template -tick basic_template.tick -type stream
+kapacitor show-template basic_template
 ```
 
 CPU
 
 ```shell
-
-kapacitor define cpu_alert -template generic_mean_alert -vars cpu_vars.json -dbrp telegraf.autogen
+kapacitor define cpu_alert -template basic_template -vars cpu_vars.json -dbrp telegraf.autogen
 kapacitor show cpu_alert
+kapacitor enable cpu_alert
 ```
 
 
 Memory
 
 ```shell
-kapacitor define mem_alert -template generic_mean_alert -vars mem_vars.json -dbrp telegraf.autogen
+kapacitor define mem_alert -template basic_template -vars mem_vars.json -dbrp telegraf.autogen
 kapacitor show mem_alert
 ```
