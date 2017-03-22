@@ -13,6 +13,9 @@ Use below scripts to launch dockers
     - start_influx_docker.sh
     - start_kapacitor_docker.sh
     - start_telegraf_docker.sh
+    - start_grafana_docker.sh
+
+For [grafana](https://github.com/grafana/grafana-docker) user name and password are admin/admin
 
 ## Trigger alert from Stream data using Tickscripts and Templates
 
