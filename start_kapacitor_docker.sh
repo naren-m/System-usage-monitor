@@ -1,4 +1,4 @@
-docker run -p 9092:9092 \
+docker run -p 9092:9092 -d \
           -v $PWD/kapacitor.conf:/etc/kapacitor/kapacitor.conf:ro \
           -v $PWD/tickscripts:/tickscripts \
           -v $PWD/templates:/templates \
