@@ -17,3 +17,5 @@ stream
     |influxDBOut()
          .database(outdb)
          .measurement(alert_measurement)
+         .tag('kapacitor', 'true')
+         .tag('version', '0.2')

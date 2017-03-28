@@ -6,7 +6,7 @@ stream
         .crit(lambda: "usage_idle" <  70)
         // Whenever we get an alert write it to a file.
         .log('/tmp/alerts.log')
-        .post('http://10.154.166.8:8080/')
+        //.post('http://10.154.166.8:8080/')
     |influxDBOut()
         .database('mydb')
         .measurement('kapactor_alerts')
