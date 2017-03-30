@@ -1,5 +1,5 @@
 var measurement = 'cpu'
-var crit = lambda: "usage_idle" <  7
+var crit = lambda: "usage_idle" <  70
 
 stream
     // Select just the cpu measurement from our example database.

@@ -1,6 +1,6 @@
 var measurement = 'cpu'
 
-var crit lambda
+var threshold int
 
 var log_file = '/tmp/alerts.log'
 
@@ -12,7 +12,7 @@ stream
     |from()
         .measurement(measurement)
     |alert()
-         .crit(crit)
+         .crit(lambda: "usage_idle" <  threshold)
          .log(log_file)
     |influxDBOut()
          .database(outdb)

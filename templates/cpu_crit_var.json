@@ -1,3 +1,3 @@
 {
-    "crit": {"type" : "lambda", "value" : "\"usage_idle\" < 70" }
+    "threshold": {"type" : "int", "value" : 70}
 }
