@@ -1,9 +1,12 @@
+var measurement = 'cpu'
+var crit = lambda: "usage_idle" <  7
+
 stream
     // Select just the cpu measurement from our example database.
     |from()
-        .measurement('cpu')
+        .measurement(measurement)
     |alert()
-        .crit(lambda: "usage_idle" <  70)
+        .crit(crit)
         // Whenever we get an alert write it to a file.
         .log('/tmp/alerts.log')
         //.post('http://10.154.166.8:8080/')
