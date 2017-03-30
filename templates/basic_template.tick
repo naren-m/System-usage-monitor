@@ -1,12 +1,12 @@
-var measurement string
+var measurement = 'cpu'
 
 var crit lambda
 
-var log_file string
+var log_file = '/tmp/alerts.log'
 
-var outdb string
+var outdb = 'mydb'
 
-var alert_measurement string
+var alert_measurement = 'kapactor_alerts'
 
 stream
     |from()

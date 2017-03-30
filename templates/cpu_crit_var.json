@@ -1,0 +1,3 @@
+{
+    "crit": {"type" : "lambda", "value" : "\"usage_idle\" < 70" }
+}
