@@ -17,6 +17,11 @@ Use below scripts to launch dockers
 
 For [grafana](https://github.com/grafana/grafana-docker) user name and password are admin/admin
 
+## Sample dashboard
+
+![Grafana Dashboard for System Usage stats](images/SystemUsageDashboard.png)
+
+
 ## Trigger alert from Stream data using Tickscripts and Templates
 
 After starting all the dockers, get on to the kapacitor docker using below command.
