@@ -1,0 +1,17 @@
+version: '3'
+
+volumes:
+  grafana_data: {}
+networks:
+  influxdb:
+
+services:
+  grafana_monit:
+    image: grafana/grafana
+    ports:
+      - 3001:3000
+    volumes:
+      - ./grafana:/var/lib/grafana
+      - grafana_data:/grafana
+    networks:
+      - influxdb
