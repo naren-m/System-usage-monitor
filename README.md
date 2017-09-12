@@ -6,14 +6,12 @@ Create a docker network named "infuxdb"
 
 ```s
 docker network create influxdb
+$ docker-compose up -d
 ```
 
-Use below scripts to launch dockers
+docker-compose builds the entire Grafana and Influx stack.
 
-    - start_influx_docker.sh
-    - start_kapacitor_docker.sh
-    - start_telegraf_docker.sh
-    - start_grafana_docker.sh
+The Grafana Dashboard is now accessible via: http://<Host IP Address>:3001 for example http://localhost:3001
 
 For [grafana](https://github.com/grafana/grafana-docker) user name and password are admin/admin
 
