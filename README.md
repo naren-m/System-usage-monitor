@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/naren-m/System-usage-monitor.svg?branch=master)](https://travis-ci.org/naren-m/System-usage-monitor)
 # Influxdata getting started with dockers
 
 ## Starting dockers
