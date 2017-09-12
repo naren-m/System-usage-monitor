@@ -5,7 +5,6 @@
 Create a docker network named "infuxdb"
 
 ```s
-docker network create influxdb
 $ docker-compose up -d
 ```
 
