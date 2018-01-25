@@ -1,13 +1,16 @@
 [![Build Status](https://travis-ci.org/naren-m/System-usage-monitor.svg?branch=master)](https://travis-ci.org/naren-m/System-usage-monitor)
 # Influxdata getting started with dockers
 
-## Starting dockers
-
-Create a docker network named "infuxdb"
+## Getting started
+1. Clone this repo
+1. Get into `System-usge-monitor` folder
+1. Run docker-compose command
 
 ```s
 $ docker-compose up -d
 ```
+
+> Create a docker network named "infuxdb"
 
 docker-compose builds the entire Grafana and Influx stack.
 
