@@ -18,26 +18,6 @@ The Grafana Dashboard is now accessible via: http://<Host IP Address>:3001 for e
 
 For [grafana](https://github.com/grafana/grafana-docker) user name and password are admin/admin
 
-## Sample dashboard
-
-![Grafana Dashboard for System Usage stats](images/SystemUsageDashboard.png)
-
-
-## Trigger alert from Stream data using Tickscripts and Templates
-
-After starting all the dockers, get on to the kapacitor docker using below command.
-
-```s
-docker exec -it kapacitor bash -l
-```
-
-Get into the tickscripts/templates directory then define and run the tickscripts/templates.
-
-
-1.[TickScripts](https://github.com/naren-m/influxdb_get_started/tree/master/tickscripts)
-
-2.[Templates](https://github.com/naren-m/influxdb_get_started/tree/master/templates)
-
 
 ## Checking logs
 
