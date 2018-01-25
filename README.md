@@ -25,7 +25,6 @@ For [grafana](https://github.com/grafana/grafana-docker) user name and password 
 docker logs -f influxdb
 docker logs -f telegraf
 docker logs -f kapacitor
-
 ```
 
 ## Creating Config file
